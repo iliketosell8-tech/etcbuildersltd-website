@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loft Conversions -  ETC Builders Ltd  </title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo.png" alt="ETC Builders Logo">
+      </a>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="basement.html">Basements</a>
+      <a href="loft.html">Lofts</a>
+      <a href="electrical.html">Electrical</a>
+      <a href="#contact" class="enquiries-btn">Enquiries</a>
+    </nav>
+  </div>
+</header>
+
+
+<div class="hero">
+  <h2>Loft Conversions</h2>
+  <p>Convert unused roof space into stylish, functional rooms.</p>
+</div>
+
+<div class="container">
+  <div class="content-wrapper">
+    <div class="text-content">
+      <h2>Loft Conversions</h2>
+      <p>
+        Maximize your home’s potential by converting unused loft spaces into bedrooms, offices, or additional bathrooms.
+      </p>
+      <ul>
+        <li>Dormer and Velux conversions</li>
+        <li>Insulation and soundproofing</li>
+        <li>Staircase installation</li>
+        <li>Electrical and lighting upgrades</li>
+      </ul>
+    </div>
+
+    <div class="image-slideshow">
+      <img src="loft-exterior.webp" alt="Loft exterior" class="slide active">
+      <img src="loft-interior1.webp" alt="Loft interior 1" class="slide">
+      <img src="loft-interior2.webp" alt="Loft interior 2" class="slide">
+      <img src="loft-interior3.webp" alt="Loft interior 3" class="slide">
+
+      <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="contact" class="contact-section">
+  <div class="container">
+    <h2>Contact Details</h2>
+
+    <p><strong>ETC Builders Ltd</strong></p>
+    <p>111 Holland Road, Flat E, W14 8AS, London</p>
+    <p>
+      Email:
+      <a href="mailto:info@etcbuilders.co.uk">etcbuildersltd@gmail.com</a>
+    <p>
+      Tel:
+      <a href="tel:+441234567890">07368875646</a>
+    </p>
+  </div>
+</div>
+
+<footer>
+  <p>&copy;     ETC Builders Ltd  </p>
+</footer>
+
+<script>
+const slideshows = document.querySelectorAll('.image-slideshow');
+
+slideshows.forEach(slideshow => {
+  const slides = slideshow.querySelectorAll('.slide');
+  const dots = slideshow.querySelectorAll('.dot');
+  let current = 0;
+
+  function showSlide(index) {
+    slides.forEach((s, i) => s.classList.toggle('active', i === index));
+    dots.forEach((d, i) => d.classList.toggle('active', i === index));
+    current = index;
+  }
+
+  function nextSlide() {
+    let next = (current + 1) % slides.length;
+    showSlide(next);
+  }
+
+  let interval = setInterval(nextSlide, 3000);
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      showSlide(i);
+      clearInterval(interval);
+      interval = setInterval(nextSlide, 3000);
+    });
+  });
+});
+</script>
+
+</body>
+</html>
+

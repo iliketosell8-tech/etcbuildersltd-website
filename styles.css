@@ -1,0 +1,270 @@
+/* =========================
+   RESET & BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background: #FFF4B8; /* softened yellow */
+  color: #1E90FF;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+  background: #FFE066; /* muted yellow */
+  border-bottom: 4px solid #1E90FF;
+  padding: 20px 0;
+}
+
+header .container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header .logo img {
+  height: 250px
+}
+
+header .logo h1 {
+  font-size: 1.8rem;
+  color: #1E90FF;
+}
+
+/* Navigation */
+nav a {
+  color: #1E90FF;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  background: #FFF9DB; /* very light yellow */
+  padding: 60px 20px;
+  text-align: center;
+  border-bottom: 3px solid #1E90FF;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+.container {
+  width: 90%;
+  margin: auto;
+  padding: 40px 0;
+}
+
+/* =========================
+   CONTENT LAYOUT
+========================= */
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.text-content {
+  flex: 1 1 400px;
+  background: #FFF9DB; /* soft card */
+  padding: 25px;
+  border-radius: 6px;
+  border: 2px solid #1E90FF;
+}
+
+.text-content h2 {
+  margin-bottom: 15px;
+}
+
+.text-content p {
+  margin-bottom: 15px;
+}
+
+.text-content ul {
+  margin-left: 20px;
+}
+
+/* =========================
+   SLIDESHOW
+========================= */
+.image-slideshow {
+  flex: 1 1 400px;
+  position: relative;
+  max-width: 600px;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  border-radius: 6px;
+  border: 2px solid #1E90FF;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+  display: block;
+}
+
+/* =========================
+   DOTS
+========================= */
+.dots {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.dot {
+  width: 11px;
+  height: 11px;
+  margin: 0 4px;
+  background: #1E90FF;
+  opacity: 0.35;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  opacity: 1;
+}
+
+/* =========================
+   LEARN MORE BUTTON (HOME)
+========================= */
+.learn-more-btn {
+  position: absolute;
+  bottom: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 7px 15px;
+  font-size: 0.85rem;
+  background: #1E90FF;
+  color: #FFF9DB;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.learn-more-btn:hover {
+  background: #1877D5;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: #FFE066;
+  border-top: 4px solid #1E90FF;
+  color: #1E90FF;
+  text-align: center;
+  padding: 20px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .learn-more-btn {
+    bottom: -45px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .text-content {
+    padding: 20px;
+  }
+
+  .learn-more-btn {
+    font-size: 0.8rem;
+    bottom: -40px;
+  }
+}
+
+/* =========================
+   ENQUIRIES BUTTON
+========================= */
+.enquiries-btn {
+  margin-left: 20px;
+  padding: 7px 16px;
+  background: #1E90FF;
+  color: #FFF9DB;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.enquiries-btn:hover {
+  background: #1877D5;
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+.contact-section {
+  background: #FFF9DB;
+  border-top: 3px solid #1E90FF;
+  padding: 40px 0;
+}
+
+.contact-section h2 {
+  margin-bottom: 15px;
+}
+
+.contact-section p {
+  margin-bottom: 8px;
+}
+
+.contact-section a {
+  color: #1E90FF;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   SMOOTH SCROLL
+========================= */
+html {
+  scroll-behavior: smooth;
+}

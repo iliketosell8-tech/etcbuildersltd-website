@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ETC Builders Ltd - Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo.png" alt="ETC Builders Logo">
+      </a>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="basement.html">Basements</a>
+      <a href="loft.html">Lofts</a>
+      <a href="electrical.html">Electrical</a>
+      <a href="#contact" class="enquiries-btn">Enquiries</a>
+    </nav>
+  </div>
+</header>
+
+
+<div class="hero">
+  <h2>Construction & Electrical Experts</h2>
+  <p>Basement extensions, loft conversions, and modern electrical installations.</p>
+</div>
+
+<div class="container">
+  <div class="content-wrapper">
+    <div class="text-content">
+      <h2>What We Do</h2>
+      <p>
+        ETC Builders Ltd provides high-quality construction and electrical services,
+        helping homeowners maximize space, comfort, and efficiency.
+      </p>
+
+      <h2>Our Core Services</h2>
+      <ul>
+        <li>Basement Extensions</li>
+        <li>Loft Conversions</li>
+        <li>Electrical Installations & Solar Panels</li>
+      </ul>
+    </div>
+
+    <div class="image-slideshow">
+      <img src="basement-exterior.webp" class="slide active" data-link="basement.html">
+      <img src="loft-exterior.webp" class="slide" data-link="loft.html">
+      <img src="solar1.jpg" class="slide" data-link="electrical.html">
+
+      <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+      <a class="learn-more-btn" href="basement.html">Learn More</a>
+    </div>
+  </div>
+</div>
+<div id="contact" class="contact-section">
+  <div class="container">
+    <h2>Contact Details</h2>
+
+    <p><strong>ETC Builders Ltd</strong></p>
+    <p>111 Holland Road, Flat E, W14 8AS, London</p>
+    <p>
+      Email:
+      <a href="mailto:info@etcbuilders.co.uk">etcbuildersltd@gmail.com</a>
+    <p>
+      Tel:
+      <a href="tel:+441234567890">07368875646</a>
+    </p>
+  </div>
+</div>
+
+<footer>
+  <p>&copy;      ETC Builders Ltd</p>
+</footer>
+
+<script>
+const slideshows = document.querySelectorAll('.image-slideshow');
+
+slideshows.forEach(slideshow => {
+  const slides = slideshow.querySelectorAll('.slide');
+  const dots = slideshow.querySelectorAll('.dot');
+  const btn = slideshow.querySelector('.learn-more-btn');
+  let current = 0;
+
+  function showSlide(i) {
+    slides.forEach((s, x) => s.classList.toggle('active', x === i));
+    dots.forEach((d, x) => d.classList.toggle('active', x === i));
+    btn.href = slides[i].dataset.link;
+    current = i;
+  }
+
+  setInterval(() => showSlide((current + 1) % slides.length), 3000);
+
+  dots.forEach((dot, i) => dot.onclick = () => showSlide(i));
+});
+</script>
+
+</body>
+</html>
