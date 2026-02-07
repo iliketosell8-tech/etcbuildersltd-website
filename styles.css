@@ -20,7 +20,7 @@ body {
 header {
   background: #FFE066; /* muted yellow */
   border-bottom: 4px solid #1E90FF;
-  padding: 20px 0;
+  padding: 25px 0; /* slightly more header padding */
 }
 
 header .container {
@@ -46,12 +46,13 @@ header .logo h1 {
   color: #1E90FF;
 }
 
-/* Navigation */
+/* Navigation - EVEN BIGGER LINKS */
 nav a {
   color: #1E90FF;
-  margin-left: 20px;
+  margin-left: 35px; /* More space between big links */
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 800; /* Extra bold */
+  font-size: 1.5rem; /* Significantly larger */
 }
 
 nav a:hover {
@@ -69,12 +70,12 @@ nav a:hover {
 }
 
 .hero h2 {
-  font-size: 2rem;
+  font-size: 2.5rem; /* Bigger hero title to match */
   margin-bottom: 15px;
 }
 
 .hero p {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 /* =========================
@@ -92,27 +93,20 @@ nav a:hover {
 .content-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 40px;
 }
 
 .text-content {
   flex: 1 1 400px;
   background: #FFF9DB; /* soft card */
-  padding: 25px;
-  border-radius: 6px;
-  border: 2px solid #1E90FF;
+  padding: 30px;
+  border-radius: 8px;
+  border: 3px solid #1E90FF; /* Thicker border */
 }
 
 .text-content h2 {
+  font-size: 1.8rem;
   margin-bottom: 15px;
-}
-
-.text-content p {
-  margin-bottom: 15px;
-}
-
-.text-content ul {
-  margin-left: 20px;
 }
 
 /* =========================
@@ -122,13 +116,14 @@ nav a:hover {
   flex: 1 1 400px;
   position: relative;
   max-width: 600px;
+  margin-bottom: 80px; /* Large gap for the massive button */
 }
 
 .slide {
   display: none;
   width: 100%;
-  border-radius: 6px;
-  border: 2px solid #1E90FF;
+  border-radius: 8px;
+  border: 3px solid #1E90FF;
   transition: opacity 0.5s ease-in-out;
 }
 
@@ -141,13 +136,13 @@ nav a:hover {
 ========================= */
 .dots {
   text-align: center;
-  margin-top: 12px;
+  margin-top: 15px;
 }
 
 .dot {
-  width: 11px;
-  height: 11px;
-  margin: 0 4px;
+  width: 14px;
+  height: 14px;
+  margin: 0 6px;
   background: #1E90FF;
   opacity: 0.35;
   border-radius: 50%;
@@ -159,24 +154,27 @@ nav a:hover {
 }
 
 /* =========================
-   LEARN MORE BUTTON (HOME)
+   LEARN MORE BUTTON - JUMBO SIZE
 ========================= */
 .learn-more-btn {
   position: absolute;
-  bottom: -55px;
+  bottom: -75px; 
   left: 50%;
   transform: translateX(-50%);
-  padding: 7px 15px;
-  font-size: 0.85rem;
+  padding: 18px 40px; /* Jumbo padding */
+  font-size: 1.4rem;   /* Jumbo font */
   background: #1E90FF;
   color: #FFF9DB;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 4px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(30, 144, 255, 0.3); /* Added shadow for pop */
+  transition: all 0.3s ease;
 }
 
 .learn-more-btn:hover {
   background: #1877D5;
+  transform: translateX(-50%) scale(1.05); /* Slight grow effect */
 }
 
 /* =========================
@@ -187,7 +185,7 @@ footer {
   border-top: 4px solid #1E90FF;
   color: #1E90FF;
   text-align: center;
-  padding: 20px;
+  padding: 30px;
 }
 
 /* =========================
@@ -197,42 +195,48 @@ footer {
   .content-wrapper {
     flex-direction: column;
   }
-
-  .learn-more-btn {
-    bottom: -45px;
-  }
 }
 
 @media (max-width: 768px) {
-  .hero h2 {
-    font-size: 1.6rem;
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
   }
-
-  .text-content {
-    padding: 20px;
+  
+  nav a {
+    font-size: 1.2rem;
+    margin-left: 0;
   }
 
   .learn-more-btn {
-    font-size: 0.8rem;
-    bottom: -40px;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    bottom: -70px;
   }
 }
 
 /* =========================
-   ENQUIRIES BUTTON
+   ENQUIRIES/ELECTRICAL BUTTON - JUMBO SIZE
 ========================= */
 .enquiries-btn {
-  margin-left: 20px;
-  padding: 7px 16px;
+  margin-left: 25px;
+  padding: 18px 40px; /* Jumbo padding */
+  font-size: 1.4rem;   /* Jumbo font */
   background: #1E90FF;
   color: #FFF9DB;
-  border-radius: 4px;
+  border-radius: 10px;
   font-weight: bold;
   text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(30, 144, 255, 0.3);
+  transition: all 0.3s ease;
 }
 
 .enquiries-btn:hover {
   background: #1877D5;
+  transform: scale(1.05);
 }
 
 /* =========================
@@ -241,25 +245,12 @@ footer {
 .contact-section {
   background: #FFF9DB;
   border-top: 3px solid #1E90FF;
-  padding: 40px 0;
+  padding: 50px 0;
 }
 
 .contact-section h2 {
+  font-size: 2rem;
   margin-bottom: 15px;
-}
-
-.contact-section p {
-  margin-bottom: 8px;
-}
-
-.contact-section a {
-  color: #1E90FF;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.contact-section a:hover {
-  text-decoration: underline;
 }
 
 /* =========================
